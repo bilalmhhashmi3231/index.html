@@ -1,0 +1,481 @@
+html_content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Carver Construction | Luxury General Contractor & Remodeling in Utah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcfcfc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+        .luxury-gold {
+            color: #c5a059;
+        }
+        .bg-luxury-dark {
+            background-color: #111827;
+        }
+        .border-luxury {
+            border-color: #d4af37;
+        }
+        .gold-button {
+            background: linear-gradient(135deg, #c5a059 0%, #b38f43 100%);
+            transition: all 0.4s ease;
+        }
+        .gold-button:hover {
+            background: linear-gradient(135deg, #b38f43 0%, #91712d 100%);
+            box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2);
+            transform: translateY(-2px);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #c5a059;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        /* Service Card Hover Zoom */
+        .service-card img {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .service-card:hover img {
+            transform: scale(1.08);
+        }
+        /* Elegant Scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c5a059;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 bg-white p-1 rounded">
+                <img src="Paul Carver Construction logo (1).jpg" alt="Paul Carver Construction Logo" class="h-16 w-auto object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x80/ffffff/000000?text=Paul+Carver+Construction';">
+            </a>
+
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold tracking-widest uppercase text-gray-800">
+                <a href="#about" class="nav-link hover:text-[#c5a059]">About</a>
+                <a href="#services" class="nav-link hover:text-[#c5a059]">Services</a>
+                <a href="#reviews" class="nav-link hover:text-[#c5a059]">Reviews</a>
+                <a href="#contact" class="nav-link hover:text-[#c5a059]">Contact</a>
+            </nav>
+
+            <div class="hidden md:block">
+                <a href="#contact" class="gold-button text-white px-6 py-3 rounded-full text-xs font-semibold tracking-wider uppercase shadow-md">
+                    Get Free Estimate
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-800 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-4 shadow-inner">
+            <a href="#about" class="block text-sm font-semibold tracking-wider uppercase text-gray-800 hover:text-[#c5a059]">About</a>
+            <a href="#services" class="block text-sm font-semibold tracking-wider uppercase text-gray-800 hover:text-[#c5a059]">Services</a>
+            <a href="#reviews" class="block text-sm font-semibold tracking-wider uppercase text-gray-800 hover:text-[#c5a059]">Reviews</a>
+            <a href="#contact" class="block text-sm font-semibold tracking-wider uppercase text-gray-800 hover:text-[#c5a059]">Contact</a>
+            <a href="#contact" class="block text-center gold-button text-white px-5 py-3 rounded text-xs font-semibold tracking-wider uppercase">
+                Get Free Estimate
+            </a>
+        </div>
+    </header>
+
+    <section class="relative bg-luxury-dark text-white py-24 md:py-36 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center opacity-25" style="background-image: url('https://avatars.mds.yandex.net/i?id=b55347313c719e30002f31ba57d5310a3db7e308-5888857-images-thumbs&n=13'); filter: grayscale(50%) contrast(120%);"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-slate-900/95 to-transparent"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 animate__animated animate__fadeInLeft">
+                <div class="inline-flex items-center space-x-2 border border-[#c5a059]/40 bg-[#c5a059]/10 px-4 py-1.5 rounded-full">
+                    <span class="w-2 h-2 rounded-full bg-[#c5a059] animate-ping"></span>
+                    <span class="text-xs uppercase tracking-widest text-[#c5a059] font-semibold">Over 45 Years of Master Craftsmanship</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-light leading-tight">
+                    Building Legacies. <br>
+                    <span class="font-semibold text-[#c5a059] italic">Refining Living Spaces.</span>
+                </h1>
+                <p class="text-gray-300 text-base md:text-lg max-w-lg font-light leading-relaxed">
+                    Licensed & Insured General Contractor based in Centerville, Utah. We elevate your lifestyle with modern kitchen designs, luxury custom bathrooms, and masterfully crafted home remodels.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#services" class="gold-button text-white px-8 py-4 rounded-full text-xs font-bold tracking-widest uppercase shadow-lg">
+                        Our Services
+                    </a>
+                    <a href="#contact" class="border border-white/30 hover:border-white hover:bg-white/10 text-white px-8 py-4 rounded-full text-xs font-bold tracking-widest uppercase transition duration-300">
+                        Contact Paul
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hidden md:grid grid-cols-2 gap-6 animate__animated animate__fadeInRight">
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 text-center hover:border-[#c5a059]/50 transition duration-300">
+                    <div class="text-4xl font-semibold text-[#c5a059] serif-font mb-2">45+</div>
+                    <p class="text-xs tracking-widest text-gray-300 uppercase">Years of Service</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 text-center hover:border-[#c5a059]/50 transition duration-300 mt-8">
+                    <div class="text-4xl font-semibold text-[#c5a059] serif-font mb-2">100%</div>
+                    <p class="text-xs tracking-widest text-gray-300 uppercase">Guaranteed Quality</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 text-center hover:border-[#c5a059]/50 transition duration-300">
+                    <div class="text-4xl font-semibold text-[#c5a059] serif-font mb-2">A+</div>
+                    <p class="text-xs tracking-widest text-gray-300 uppercase">BBB Rating</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 text-center hover:border-[#c5a059]/50 transition duration-300 mt-8">
+                    <div class="text-4xl font-semibold text-[#c5a059] serif-font mb-2">350+</div>
+                    <p class="text-xs tracking-widest text-gray-300 uppercase">Homes Perfected</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-72 h-72 bg-[#c5a059]/10 rounded-2xl -z-10"></div>
+                    <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-slate-100 rounded-2xl -z-10"></div>
+                    <img src="https://avatars.mds.yandex.net/i?id=b55347313c719e30002f31ba57d5310a3db7e308-5888857-images-thumbs&n=13" alt="Quality Craftsmanship" class="rounded-2xl shadow-xl w-full object-cover h-[450px]">
+                </div>
+                
+                <div class="space-y-6">
+                    <span class="text-[#c5a059] uppercase tracking-widest font-bold text-xs">A Legacy of Trust</span>
+                    <h2 class="text-3xl md:text-4xl font-light text-slate-900 leading-tight">Your Premium Building and <span class="font-bold">Remodeling Partner</span> in Utah</h2>
+                    <p class="text-gray-600 leading-relaxed font-light">
+                        At Paul Carver Construction, we make home transformation completely stress-free. Serving homeowners across Centerville, Layton, Salt Lake City, and Davis Counties, we bring meticulous planning, design, and over four decades of carpentry and contracting excellence to every home.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed font-light">
+                        Whether structural changes, luxury bathroom renovations, or detailed custom trim work are needed, our team remains committed to the highest industry standards, budget transparency, and timely delivery.
+                    </p>
+                    <div class="pt-4 border-t border-gray-100 grid grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-slate-800 text-sm tracking-wider uppercase mb-1">Local Expertise</h4>
+                            <p class="text-xs text-gray-500">Fully compliant with Utah’s unique building codes and local architectural styles.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-slate-800 text-sm tracking-wider uppercase mb-1">Guaranteed Work</h4>
+                            <p class="text-xs text-gray-500">We stand solidly behind our craftsmanship with robust warranties.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-slate-50 border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+            <span class="text-[#c5a059] uppercase tracking-widest font-bold text-xs">Exquisite Services</span>
+            <h2 class="text-3xl md:text-4xl font-light text-slate-900 mt-2">Specialized Remodeling & Construction</h2>
+            <div class="w-16 h-1 bg-[#c5a059] mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <div class="service-card bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://avatars.mds.yandex.net/i?id=b55347313c719e30002f31ba57d5310a3db7e308-5888857-images-thumbs&n=13" alt="Residential Remodeling" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-[#c5a059] text-white text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full">
+                        Remodel
+                    </div>
+                </div>
+                <div class="p-8 space-y-4">
+                    <h3 class="text-xl font-bold text-slate-800">Residential Remodeling</h3>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed">
+                        Complete whole-home transformations, basement finishes, room additions, and exterior trim upgrades crafted carefully to enhance space, longevity, and your property value.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center text-xs tracking-wider uppercase font-bold text-[#c5a059] hover:text-[#91712d] transition-colors">
+                        Learn More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://avatars.mds.yandex.net/i?id=999eceadeb9d3aa331b72ca0bfae14e9b31914cf-4599550-images-thumbs&n=13" alt="Kitchen Remodeling" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-[#c5a059] text-white text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full">
+                        Luxury
+                    </div>
+                </div>
+                <div class="p-8 space-y-4">
+                    <h3 class="text-xl font-bold text-slate-800">Kitchen Remodeling</h3>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed">
+                        Reimagine the heart of your home. Elegant layouts, premium custom cabinetry, countertops, smart lighting configurations, and contemporary layouts tailored to food and family.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center text-xs tracking-wider uppercase font-bold text-[#c5a059] hover:text-[#91712d] transition-colors">
+                        Learn More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://yandex-images.clstorage.net/D5E41ZX16/7b1b23hc/cw1xj20mRxHtp28pQaPuYhGKryBgALgpaMGQQmxwy_Jejxp4YTOZapPUV0s5jSdpl-2Z_b49EUpVPWvcFIg57eNMUc454jNwePJ7GNTjblJBq3r0URF9iS0QNGep8ftnzt96e_Kk3n3wQ6Q5i8-g3QfoDC263GEfJdu9TSJ-_vrBfYFcTpUG5y0ULH6AILwj8anr8sFgfriuMWBG6bF-5Dk4fTuCRbwdE5I1CHtsky00mG3867qQbuVpXRlDrQ_YUkzBzw3FdzY-Bm8NwiKP4WO7ieLSopwZv2NTR9iDfKeqCexqM0X-j2ETdCmK_0JPpbuvXmvoMV2mO3w5YZ0OeSH-w-x8B_YH7EVubXJxPfCw2CkS4DKNupyhMvTYEK_XC8nNKzA1rj0BQkf7O94wDhVp_q6bCZHuhakueTJfDAhgHmCtfiWHdc0nXC8AYa3RUXipgaLRzDtco9NWmjCOBVhLftlyND3vkqA3yAmPcCxUWN_t2asjzcWZbCigvX-Z4mzwDI5UZwd85mz_cTD8YpHJ6MDxwLxZfwHA9XlyTVSLiP8pk3TvbTEwRcobbALOdtlMPvlrsY0VOG_rEH3umPHfkB-P9RQHzmV8PeLg7uJhu_lBIoJs6X-TQKb7kr_0W0lcCSP1Tw6T4aS5u5xyzDSp_R95-lI8tSl929CfzZoBrzMNLaY1Jy51nm-yo0wxw4tIwFKi7Ir_c4NniFLeh4h6_6iy9j0f8SOEiQntUT33e_4_iWuBDVXqHOiBjY86o--xv3wmxmWM9W1_QNHtADE6CrIw4YwZD1PxRLmiDGWLmuwKMafuX0DARgqZjiD-dwheXdgrED0nKJ5YYQ-c2eN_gww9lxdX3CdPH_AgnKPxuhpCU3Bca9wicvfrwkzEKFk_i6JV3h7xE5Q6u29SfafY_z-6WgH95yt-2FLt7wpwPPHe3xWHd6xnDq8RQuzTMIk6Y_NinVl9IBCW67Cug" alt="Bathroom Remodeling" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-[#c5a059] text-white text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full">
+                        Modern
+                    </div>
+                </div>
+                <div class="p-8 space-y-4">
+                    <h3 class="text-xl font-bold text-slate-800">Bathroom Remodeling</h3>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed">
+                        Transform your bathroom into a modern, functional, and relaxing space. Custom tile layouts, floating vanities, luxury bathtubs, and efficient storage design.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center text-xs tracking-wider uppercase font-bold text-[#c5a059] hover:text-[#91712d] transition-colors">
+                        Learn More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+            <span class="text-[#c5a059] uppercase tracking-widest font-bold text-xs">Customer Stories</span>
+            <h2 class="text-3xl md:text-4xl font-light text-slate-900 mt-2">What Our Clients Say</h2>
+            <div class="w-16 h-1 bg-[#c5a059] mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <div class="bg-slate-50 p-8 rounded-2xl border border-gray-100 flex flex-col justify-between hover:shadow-lg transition duration-300">
+                <div class="space-y-4">
+                    <div class="flex text-amber-400">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm font-light italic leading-relaxed">
+                        "Our old bathroom was renovated by Paul and his crew in two weeks, and they finished ahead of schedule. Every tile lined up precisely, the fixtures were put with care, and their attention to detail was evident from the demo to the final grout."
+                    </p>
+                </div>
+                <div class="mt-6 flex items-center space-x-3 pt-4 border-t border-gray-200/60">
+                    <div class="w-10 h-10 rounded-full bg-[#c5a059] text-white flex items-center justify-center font-bold text-sm">
+                        AR
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold text-slate-800">A1top R.</h4>
+                        <p class="text-xs text-gray-400">Utah Resident</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 p-8 rounded-2xl border border-gray-100 flex flex-col justify-between hover:shadow-lg transition duration-300">
+                <div class="space-y-4">
+                    <div class="flex text-amber-400">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm font-light italic leading-relaxed">
+                        "I had a really good experience with Paul and his team. The deck was finished faster than I expected, but they didn't rush through the details. They were very helpful and provided a clear estimate that was within my budget."
+                    </p>
+                </div>
+                <div class="mt-6 flex items-center space-x-3 pt-4 border-t border-gray-200/60">
+                    <div class="w-10 h-10 rounded-full bg-[#c5a059] text-white flex items-center justify-center font-bold text-sm">
+                        JM
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold text-slate-800">Jean M.</h4>
+                        <p class="text-xs text-gray-400">Homeowner</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 p-8 rounded-2xl border border-gray-100 flex flex-col justify-between hover:shadow-lg transition duration-300">
+                <div class="space-y-4">
+                    <div class="flex text-amber-400">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm font-light italic leading-relaxed">
+                        "I hired Paul and his team to renovate our office space near in Salt Lake City. Their team was punctual, responsive, and extremely detail-oriented. Our office required a kitchen and event room renovation and extensive painting."
+                    </p>
+                </div>
+                <div class="mt-6 flex items-center space-x-3 pt-4 border-t border-gray-200/60">
+                    <div class="w-10 h-10 rounded-full bg-[#c5a059] text-white flex items-center justify-center font-bold text-sm">
+                        JG
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold text-slate-800">Jeff G.</h4>
+                        <p class="text-xs text-gray-400">Office Administrator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-slate-50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <div class="space-y-8">
+                <div>
+                    <span class="text-[#c5a059] uppercase tracking-widest font-bold text-xs">Let's Connect</span>
+                    <h2 class="text-3xl md:text-4xl font-light text-slate-900 mt-2">Request A Free Consultation</h2>
+                    <p class="text-gray-500 text-sm mt-3 font-light">Let's discuss your custom layout and get your remodeling project estimated.</p>
+                </div>
+
+                <form class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-2">Name</label>
+                            <input type="text" placeholder="John Doe" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#c5a059] text-sm transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-2">Phone</label>
+                            <input type="tel" placeholder="(801) 231-3668" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#c5a059] text-sm transition">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-2">Email</label>
+                        <input type="email" placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#c5a059] text-sm transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-2">Remodeling Interest</label>
+                        <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#c5a059] text-sm text-gray-600 bg-white transition">
+                            <option>Select Option</option>
+                            <option>Residential Remodeling</option>
+                            <option>Kitchen Remodeling</option>
+                            <option>Bathroom Remodeling</option>
+                            <option>Decks & Exterior</option>
+                            <option>Other Custom Construction</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-2">Message</label>
+                        <textarea rows="4" placeholder="Tell us about your project expectations..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#c5a059] text-sm transition"></textarea>
+                    </div>
+                    <button type="button" class="w-full gold-button text-white text-xs font-bold tracking-widest uppercase py-4 rounded-xl shadow-md">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <div class="space-y-8 flex flex-col justify-between">
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 space-y-6">
+                    <h3 class="text-xl font-bold text-slate-800">Our Office</h3>
+                    <div class="space-y-4 text-sm text-gray-600">
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot text-[#c5a059] mt-1"></i>
+                            <p>163 E 1100 N, Centerville, UT 84014</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-phone text-[#c5a059] mt-1"></i>
+                            <p>(801) 231-3668</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-envelope text-[#c5a059] mt-1"></i>
+                            <p>pcarverconst@comcast.net</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden shadow-md border border-gray-100 h-80">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.4377983636586!2d-111.8741005!3d40.9171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752538cbcf7c487%3A0xe6bf446ee094c9bc!2sPaul%20Carver%20Construction!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-luxury-dark text-gray-400 pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 mb-12">
+            <div class="space-y-4 md:col-span-2">
+                <div class="bg-white inline-block p-1.5 rounded">
+                    <img src="Paul Carver Construction logo (1).jpg" alt="Paul Carver Construction Logo" class="h-12 w-auto object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/150x60/ffffff/000000?text=Paul+Carver+Construction';">
+                </div>
+                <p class="text-xs text-gray-400 max-w-sm leading-relaxed">
+                    Licensed & Insured residential and commercial General Contractor providing decades of outstanding framing, carpentry, siding, kitchen, bathroom, and full home remodeling.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-white text-xs font-bold tracking-widest uppercase">Navigation</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#about" class="hover:text-[#c5a059] transition">About Us</a></li>
+                    <li><a href="#services" class="hover:text-[#c5a059] transition">Our Services</a></li>
+                    <li><a href="#reviews" class="hover:text-[#c5a059] transition">Customer Reviews</a></li>
+                    <li><a href="#contact" class="hover:text-[#c5a059] transition">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-white text-xs font-bold tracking-widest uppercase">Our Profile</h4>
+                <ul class="space-y-2 text-xs">
+                    <li>
+                        <a href="https://www.google.com/maps?cid=16627076332152867260" target="_blank" class="hover:text-[#c5a059] transition inline-flex items-center space-x-2">
+                            <i class="fa-brands fa-google text-red-500"></i>
+                            <span>View on Google Maps</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.paulgeneralcontractor.com/" target="_blank" class="hover:text-[#c5a059] transition inline-flex items-center space-x-2">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>Official Website</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-white/5 flex flex-wrap items-center justify-between text-xs">
+            <p>&copy; 2026 Paul Carver Construction. All Rights Reserved.</p>
+            <p>Designed with elegance & luxury aesthetics.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu on navigation click
+        const links = menu.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
+"""
+
+with open("index.html", "w", encoding="utf-8") as file:
+    file.write(html_content)
+
+print("index.html file has been generated successfully!")
