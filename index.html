@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Carver Construction | Luxury General Contractor</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        luxury: {
+                            gold: '#D4AF37',
+                            goldHover: '#C5A028',
+                            dark: '#111827',
+                            charcoal: '#1F2937',
+                            cream: '#FAF9F6',
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                        'subtle-zoom': 'subtleZoom 20s infinite alternate',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        subtleZoom: {
+                            '0%': { transform: 'scale(1)' },
+                            '100%': { transform: 'scale(1.08)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .luxury-gradient {
+            background: linear-gradient(135deg, #111827 0%, #1F2937 100%);
+        }
+        .service-card:hover .service-img {
+            transform: scale(1.1);
+        }
+        .service-card:hover .service-overlay {
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body class="font-sans bg-luxury-cream text-luxury-dark selection:bg-luxury-gold selection:text-luxury-dark overflow-x-hidden">
+
+    <header class="sticky top-0 z-50 bg-white shadow-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <a href="#" class="flex items-center">
+                <img src="https://www.paulgeneralcontractor.com/wp-content/uploads/2025/08/paul-carver-logo.webp" 
+                     alt="Paul Carver Construction Logo" 
+                     class="h-14 md:h-18 w-auto object-contain transition-transform duration-300 hover:scale-105">
+            </a>
+            
+            <nav class="hidden md:flex space-x-10 items-center">
+                <a href="#about" class="text-luxury-dark font-medium tracking-wider uppercase text-xs hover:text-luxury-gold transition-colors duration-300">About</a>
+                <a href="#services" class="text-luxury-dark font-medium tracking-wider uppercase text-xs hover:text-luxury-gold transition-colors duration-300">Services</a>
+                <a href="#reviews" class="text-luxury-dark font-medium tracking-wider uppercase text-xs hover:text-luxury-gold transition-colors duration-300">Reviews</a>
+                <a href="#contact" class="text-luxury-dark font-medium tracking-wider uppercase text-xs hover:text-luxury-gold transition-colors duration-300">Contact</a>
+                <a href="#contact" class="border border-luxury-gold px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-luxury-gold hover:bg-luxury-gold hover:text-white transition-all duration-300 rounded">
+                    Get Free Estimate
+                </a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-luxury-dark focus:outline-none" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-4">
+            <a href="#about" class="block text-luxury-dark font-medium tracking-wider uppercase text-sm hover:text-luxury-gold py-1">About</a>
+            <a href="#services" class="block text-luxury-dark font-medium tracking-wider uppercase text-sm hover:text-luxury-gold py-1">Services</a>
+            <a href="#reviews" class="block text-luxury-dark font-medium tracking-wider uppercase text-sm hover:text-luxury-gold py-1">Reviews</a>
+            <a href="#contact" class="block text-luxury-dark font-medium tracking-wider uppercase text-sm hover:text-luxury-gold py-1">Contact</a>
+            <a href="#contact" class="block bg-luxury-gold text-center text-white font-bold py-3 px-4 uppercase tracking-wider text-xs rounded hover:bg-luxury-goldHover transition-colors">
+                Get Free Estimate
+            </a>
+        </div>
+    </header>
+
+    <section class="relative h-[85vh] flex items-center overflow-hidden bg-black text-white">
+        <div class="absolute inset-0 z-0 opacity-55 animate-subtle-zoom bg-cover bg-center" 
+             style="background-image: url('https://avatars.mds.yandex.net/i?id=b55347313c719e30002f31ba57d5310a3db7e308-5888857-images-thumbs&n=13');">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-luxury-dark via-transparent to-transparent z-10"></div>
+        
+        <div class="relative z-20 max-w-7xl mx-auto px-6 w-full text-center md:text-left animate-fade-in-up">
+            <span class="text-luxury-gold font-serif text-sm md:text-base tracking-widest uppercase mb-4 block font-semibold">Paul Carver Construction</span>
+            <h1 class="text-4xl md:text-7xl font-serif font-extrabold tracking-tight mb-6 leading-tight max-w-4xl">
+                Crafting Luxury Spaces, <br class="hidden md:inline"><span class="text-luxury-gold">Guaranteed to Last</span>
+            </h1>
+            <p class="text-gray-200 text-lg md:text-xl max-w-2xl mb-8 leading-relaxed font-light">
+                As Davis County's premier construction partner, we transform visions into architectural masterpieces with elite craftsmanship and transparent execution.
+            </p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                <a href="#contact" class="bg-luxury-gold hover:bg-luxury-goldHover text-luxury-dark font-bold py-4 px-8 uppercase tracking-widest text-xs transition-all duration-300 shadow-lg rounded">
+                    Schedule Consultation
+                </a>
+                <a href="#services" class="border border-white hover:bg-white hover:text-luxury-dark text-white font-bold py-4 px-8 uppercase tracking-widest text-xs transition-all duration-300 rounded">
+                    Explore Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-luxury-gold font-serif text-sm tracking-widest uppercase block">The Premium Standard</span>
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold text-luxury-dark">Your Trusted Partner for Quality Construction</h2>
+                    <div class="w-20 h-1 bg-luxury-gold"></div>
+                    <p class="text-gray-600 leading-relaxed text-base md:text-lg">
+                        When it comes to improving or building your home, you need trusted experts. At <strong>Paul Carver Construction</strong>, we serve homeowners and businesses as general contractors in Layton, Centerville, and surrounding Utah communities. 
+                    </p>
+                    <p class="text-gray-600 leading-relaxed text-base">
+                        We specialize in delivering top-notch construction, remodeling, and renovation services. From modern open-concept updates to heavy structural additions, our process blends high-end design, exceptional durability, and precision to give your home a fresh, luxurious layout.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="text-luxury-gold text-lg mt-1"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <h4 class="font-serif font-bold text-sm uppercase">Local Expertise</h4>
+                                <p class="text-xs text-gray-500">Tailored to Utah's architectural rules.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="text-luxury-gold text-lg mt-1"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <h4 class="font-serif font-bold text-sm uppercase">Quality Craftsmanship</h4>
+                                <p class="text-xs text-gray-500">Every single detail reflects master skill.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="text-luxury-gold text-lg mt-1"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <h4 class="font-serif font-bold text-sm uppercase">Personalized Layouts</h4>
+                                <p class="text-xs text-gray-500">We design around your lifestyle.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="text-luxury-gold text-lg mt-1"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <h4 class="font-serif font-bold text-sm uppercase">Transparent Estimating</h4>
+                                <p class="text-xs text-gray-500">Clear budgets without hidden pricing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 bg-luxury-dark text-white p-10 rounded-lg shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-luxury-gold opacity-10 rounded-full translate-x-12 -translate-y-12"></div>
+                    <h3 class="text-2xl font-serif mb-6 text-luxury-gold">Why Paul Carver Construction?</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="text-3xl font-serif text-luxury-gold font-bold">100%</div>
+                            <p class="text-sm text-gray-400">Customized Service Satisfaction</p>
+                        </div>
+                        <hr class="border-gray-800">
+                        <div>
+                            <div class="text-3xl font-serif text-luxury-gold font-bold">Decades</div>
+                            <p class="text-sm text-gray-400">Of Hands-On Local Experience</p>
+                        </div>
+                        <hr class="border-gray-800">
+                        <div>
+                            <div class="text-3xl font-serif text-luxury-gold font-bold">Full-Scale</div>
+                            <p class="text-sm text-gray-400">Licensed & Insured General Contracting</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-luxury-cream">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="text-luxury-gold font-serif text-sm tracking-widest uppercase block mb-3">Master Craft Services</span>
+            <h2 class="text-3xl md:text-5xl font-serif font-bold text-luxury-dark mb-4">Elite Remodeling Services</h2>
+            <div class="w-24 h-1 bg-luxury-gold mx-auto mb-16"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="service-card group bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between rounded-lg">
+                    <div class="relative overflow-hidden h-72">
+                        <div class="service-overlay absolute inset-0 bg-black opacity-10 transition-opacity duration-300 z-10"></div>
+                        <img src="https://avatars.mds.yandex.net/i?id=b55347313c719e30002f31ba57d5310a3db7e308-5888857-images-thumbs&n=13" 
+                             alt="Residential remodeling" 
+                             class="service-img w-full h-full object-cover transition-transform duration-500 ease-out">
+                    </div>
+                    <div class="p-8 text-left space-y-4 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-serif font-bold group-hover:text-luxury-gold transition-colors">Residential Remodeling</h3>
+                            <p class="text-sm text-gray-500 leading-relaxed mt-2">
+                                Complete home transformations including basement finishings, garage expansions, and deck constructions. Our process breathes new, custom life into every layout.
+                            </p>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-luxury-gold hover:text-luxury-goldHover group-hover:translate-x-2 transition-transform">
+                            Inquire Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card group bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between rounded-lg">
+                    <div class="relative overflow-hidden h-72">
+                        <div class="service-overlay absolute inset-0 bg-black opacity-10 transition-opacity duration-300 z-10"></div>
+                        <img src="https://avatars.mds.yandex.net/i?id=999eceadeb9d3aa331b72ca0bfae14e9b31914cf-4599550-images-thumbs&n=13" 
+                             alt="Kitchen Remodeling" 
+                             class="service-img w-full h-full object-cover transition-transform duration-500 ease-out">
+                    </div>
+                    <div class="p-8 text-left space-y-4 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-serif font-bold group-hover:text-luxury-gold transition-colors">Kitchen Remodeling</h3>
+                            <p class="text-sm text-gray-500 leading-relaxed mt-2">
+                                Build a kitchen that works beautifully. Premium custom cabinetry, high-end stone countertop installations, modern lighting configurations, and sleek layouts.
+                            </p>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-luxury-gold hover:text-luxury-goldHover group-hover:translate-x-2 transition-transform">
+                            Inquire Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card group bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between rounded-lg">
+                    <div class="relative overflow-hidden h-72">
+                        <div class="service-overlay absolute inset-0 bg-black opacity-10 transition-opacity duration-300 z-10"></div>
+                        <img src="https://yandex-images.clstorage.net/D5E41ZX16/7b1b23hc/cw1xj20mRxHtp28pQaPuYhGKryBgALgpaMGQQmxwy_Jejxp4YTOZapPUV0s5jSdpl-2Z_b49EUpVPWvcFIg57eNMUc454jNwePJ7GNTjblJBq3r0URF9iS0QNGep8ftnzt96e_Kk3n3wQ6Q5i8-g3QfoDC263GEfJdu9TSJ-_vrBfYFcTpUG5y0ULH6AILwj8anr8sFgfriuMWBG6bF-5Dk4fTuCRbwdE5I1CHtsky00mG3867qQbuVpXRlDrQ_YUkzBzw3FdzY-Bm8NwiKP4WO7ieLSopwZv2NTR9iDfKeqCexqM0X-j2ETdCmK_0JPpbuvXmvoMV2mO3w5YZ0OeSH-w-x8B_YH7EVubXJxPfCw2CkS4DKNupyhMvTYEK_XC8nNKzA1rj0BQkf7O94wDhVp_q6bCZHuhakueTJfDAhgHmCtfiWHdc0nXC8AYa3RUXipgaLRzDtco9NWmjCOBVhLftlyND3vkqA3yAmPcCxUWN_t2asjzcWZbCigvX-Z4mzwDI5UZwd85mz_cTD8YpHJ6MDxwLxZfwHA9XlyTVSLiP8pk3TvbTEwRcobbALOdtlMPvlrsY0VOG_rEH3umPHfkB-P9RQHzmV8PeLg7uJhu_lBIoJs6X-TQKb7kr_0W0lcCSP1Tw6T4aS5u5xyzDSp_R95-lI8tSl929CfzZoBrzMNLaY1Jy51nm-yo0wxw4tIwFKi7Ir_c4NniFLeh4h6_6iy9j0f8SOEiQntUT33e_4_iWuBDVXqHOiBjY86o--xv3wmxmWM9W1_QNHtADE6CrIw4YwZD1PxRLmiDGWLmuwKMafuX0DARgqZjiD-dwheXdgrED0nKJ5YYQ-c2eN_gww9lxdX3CdPH_AgnKPxuhpCU3Bca9wicvfrwkzEKFk_i6JV3h7xE5Q6u29SfafY_z-6WgH95yt-2FLt7wpwPPHe3xWHd6xnDq8RQuzTMIk6Y_NinVl9IBCW67Cug" 
+                             alt="Bathroom Remodeling" 
+                             class="service-img w-full h-full object-cover transition-transform duration-500 ease-out">
+                    </div>
+                    <div class="p-8 text-left space-y-4 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-serif font-bold group-hover:text-luxury-gold transition-colors">Bathroom Remodeling</h3>
+                            <p class="text-sm text-gray-500 leading-relaxed mt-2">
+                                Transform your master bath into a high-end, relaxing sanctuary. Custom tiles, modern custom vanities, advanced plumbing fixture upgrades, and smart storage systems.
+                            </p>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-luxury-gold hover:text-luxury-goldHover group-hover:translate-x-2 transition-transform">
+                            Inquire Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="text-luxury-gold font-serif text-sm tracking-widest uppercase block mb-3">Client Devotion</span>
+            <h2 class="text-3xl md:text-5xl font-serif font-bold text-luxury-dark mb-4">Five-Star Experiences</h2>
+            <div class="w-24 h-1 bg-luxury-gold mx-auto mb-16"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-luxury-cream p-8 rounded-lg shadow-md border-t-4 border-luxury-gold flex flex-col justify-between text-left">
+                    <div>
+                        <div class="flex space-x-1 text-luxury-gold mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm text-gray-600 italic leading-relaxed mb-6">
+                            "Paul Carver and his crew remodeled our outdated kitchen. From custom cabinetry planning to quartz finishes, the details and communication were spectacular. Highly recommended contractor in Layton!"
+                        </p>
+                    </div>
+                    <div class="border-t border-gray-200 pt-4">
+                        <h4 class="font-serif font-bold text-sm uppercase text-luxury-dark">Marcus S.</h4>
+                        <span class="text-xs text-gray-400">Layton, UT</span>
+                    </div>
+                </div>
+
+                <div class="bg-luxury-cream p-8 rounded-lg shadow-md border-t-4 border-luxury-gold flex flex-col justify-between text-left">
+                    <div>
+                        <div class="flex space-x-1 text-luxury-gold mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm text-gray-600 italic leading-relaxed mb-6">
+                            "Absolutely incredible craftsmanship with our complete master bathroom remodel. The tiling is gorgeous and the floating double-vanity has given our bathroom a complete luxury spa feel."
+                        </p>
+                    </div>
+                    <div class="border-t border-gray-200 pt-4">
+                        <h4 class="font-serif font-bold text-sm uppercase text-luxury-dark">Elena R.</h4>
+                        <span class="text-xs text-gray-400">Centerville, UT</span>
+                    </div>
+                </div>
+
+                <div class="bg-luxury-cream p-8 rounded-lg shadow-md border-t-4 border-luxury-gold flex flex-col justify-between text-left">
+                    <div>
+                        <div class="flex space-x-1 text-luxury-gold mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm text-gray-600 italic leading-relaxed mb-6">
+                            "We commissioned an attached garage with additional overhead storage loft. Paul and his team completed construction cleanly, safely, and on timeline. Perfect local general contractors!"
+                        </p>
+                    </div>
+                    <div class="border-t border-gray-200 pt-4">
+                        <h4 class="font-serif font-bold text-sm uppercase text-luxury-dark">David K.</h4>
+                        <span class="text-xs text-gray-400">Bountiful, UT</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 luxury-gradient text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-luxury-gold font-serif text-sm tracking-widest uppercase block mb-3">Begin Your Build</span>
+                        <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4">Let's Bring Your Vision to Life</h2>
+                        <div class="w-16 h-1 bg-luxury-gold"></div>
+                    </div>
+                    
+                    <p class="text-gray-300 leading-relaxed">
+                        Whether you are planning a high-end luxury bathroom transformation, complex structural kitchen upgrades, or general custom home development, our experts are prepared to coordinate with you seamlessly.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-gray-800 text-luxury-gold p-3 rounded"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h4 class="text-xs text-gray-400 uppercase tracking-widest">Call or Text</h4>
+                                <a href="tel:8012313668" class="font-serif font-bold hover:text-luxury-gold text-lg">(801) 231-3668</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-gray-800 text-luxury-gold p-3 rounded"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h4 class="text-xs text-gray-400 uppercase tracking-widest">Send Email</h4>
+                                <a href="mailto:pcarverconst@comcast.net" class="font-serif font-bold hover:text-luxury-gold text-lg">pcarverconst@comcast.net</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-gray-800 text-luxury-gold p-3 rounded"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h4 class="text-xs text-gray-400 uppercase tracking-widest">Office Address</h4>
+                                <p class="font-serif text-sm">163 E 1100 N, Centerville, UT 84014</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-white text-luxury-dark p-8 md:p-12 rounded-lg shadow-2xl">
+                    <h3 class="text-2xl font-serif font-bold mb-6">Request A Free Quote</h3>
+                    <form action="#" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold uppercase tracking-wide text-gray-500">Your Name</label>
+                                <input type="text" placeholder="John Doe" required class="w-full bg-gray-50 border border-gray-200 px-4 py-3 rounded text-sm focus:outline-none focus:border-luxury-gold">
+                            </div>
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold uppercase tracking-wide text-gray-500">Phone Number</label>
+                                <input type="tel" placeholder="Phone" required class="w-full bg-gray-50 border border-gray-200 px-4 py-3 rounded text-sm focus:outline-none focus:border-luxury-gold">
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold uppercase tracking-wide text-gray-500">Email Address</label>
+                            <input type="email" placeholder="john@example.com" required class="w-full bg-gray-50 border border-gray-200 px-4 py-3 rounded text-sm focus:outline-none focus:border-luxury-gold">
+                        </div>
+
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold uppercase tracking-wide text-gray-500">Desired Service</label>
+                            <select class="w-full bg-gray-50 border border-gray-200 px-4 py-3 rounded text-sm focus:outline-none focus:border-luxury-gold text-gray-600">
+                                <option>Residential Remodeling</option>
+                                <option>Kitchen Remodeling</option>
+                                <option>Bathroom Remodeling</option>
+                                <option>Other/Custom Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold uppercase tracking-wide text-gray-500">Describe Your Project</label>
+                            <textarea rows="4" placeholder="Tell us about details, budget, and timeline expectations..." class="w-full bg-gray-50 border border-gray-200 px-4 py-3 rounded text-sm focus:outline-none focus:border-luxury-gold"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-luxury-gold hover:bg-luxury-goldHover text-white font-bold py-4 uppercase tracking-widest text-xs transition-colors rounded">
+                            Send Request <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-luxury-dark border-t border-gray-800 text-gray-400 py-16">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+            
+            <div class="md:col-span-4 space-y-6">
+                <div class="bg-white p-3 inline-block rounded max-w-[200px]">
+                    <img src="https://www.paulgeneralcontractor.com/wp-content/uploads/2025/08/paul-carver-logo.webp" 
+                         alt="Paul Carver Logo" 
+                         class="h-10 w-auto object-contain">
+                </div>
+                <p class="text-sm leading-relaxed">
+                    At Paul Carver Construction, we blend engineering excellence with clean modern luxury design templates. We are among Utah's highest-reviewed local general contracting organizations.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.google.com/maps" target="_blank" class="hover:text-luxury-gold text-xl transition-colors"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="hover:text-luxury-gold text-xl transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-luxury-gold text-xl transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 space-y-4">
+                <h4 class="font-serif text-white uppercase tracking-wider text-sm font-bold border-l-2 border-luxury-gold pl-3">Explore Menu</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#about" class="hover:text-luxury-gold transition-colors block">About Our Quality</a></li>
+                    <li><a href="#services" class="hover:text-luxury-gold transition-colors block">Remodeling Services</a></li>
+                    <li><a href="#reviews" class="hover:text-luxury-gold transition-colors block">Customer Testimonials</a></li>
+                    <li><a href="#contact" class="hover:text-luxury-gold transition-colors block">Get a Consultation</a></li>
+                    <li><a href="https://www.google.com/maps" target="_blank" class="text-luxury-gold hover:underline transition-all block font-semibold mt-4"><i class="fa-solid fa-map-location-dot mr-2"></i>View GMB Listing</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-4 space-y-4">
+                <h4 class="font-serif text-white uppercase tracking-wider text-sm font-bold border-l-2 border-luxury-gold pl-3">Our Service Area Map</h4>
+                <div class="w-full overflow-hidden rounded shadow-lg border border-gray-800">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d386068.7255450631!2d-112.11621355!3d40.89026295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752f7b36bb22b4b%3A0x595c008af814322b!2sPaul%20Carver%20Construction!5e0!3m2!1sen!2sus!4v1783714016131!5m2!1sen!2sus" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-gray-800 text-center text-xs space-y-2">
+            <p>&copy; 2026 Paul Carver Construction. All Rights Reserved.</p>
+            <p>Centerville, Layton, UT and Surrounding Counties.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on clicking any navigation anchor
+        const menuAnchors = menu.querySelectorAll('a');
+        menuAnchors.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
