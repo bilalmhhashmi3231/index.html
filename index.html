@@ -1,9 +1,4 @@
-# Now, let's build the HTML string with modern design, beautiful gold/charcoal color palette matching the logo,
-# and high-quality premium feel, complete with animations (using AOS or custom CSS keyframe animations,
-# custom CSS is safer for pure static single file elegance and zero-dependency reliability).
-# We'll use custom CSS transitions and animations to make it "animated luxury".
-
-html_content = f"""<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -1353,3 +1348,17 @@ with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_content)
 
 print("HTML template generated successfully!")
+import os
+import base64
+
+logo_path = 'Paul Carver Construction logo (1).jpg'
+logo_base64 = ""
+if os.path.exists(logo_path):
+    with open(logo_path, "rb") as image_file:
+        logo_base64 = base64.b64encode(image_file.read()).decode('utf-8')
+        logo_data_uri = f"data:image/jpeg;base64,{logo_base64}"
+else:
+    # Fallback to a placeholder if not found, but it should be there as an uploaded file
+    logo_data_uri = ""
+
+print(f"Logo Base64 length: {len(logo_base64)}")
